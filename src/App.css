@@ -1,0 +1,125 @@
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  border: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+.screen{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: auto; /* taşanları otomatik gizle */
+}
+
+.screen.editable{
+  cursor: crosshair;  /* mouse imlecini "+" şeklinde yaptım */
+}
+
+.commenttext{
+  background: rgba(0, 0, 0, .7); /* yarı transparan arka plan */
+  color: #fff;
+  padding: 5px 10;
+  transform: translateY(-50%); /* Tam mouse imlecini ortalaması için */
+  font-size: 14px;
+  border-radius: 3px;
+}
+
+.note-container note{
+  background-color: var(--color);
+  padding: 5px 10px;
+  border-radius: 4px;
+  color: #fff;
+  transform: translateX(-50%);
+  transform: translateX(-50%) translateY(40%); 
+}
+
+.note-container{
+  background-color: var(--color);
+  color: #fff;
+  width: 300px;
+  margin-left: -150px;
+  margin-top: 40px;
+}
+
+.note-box{
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 5px 0 rgb(0, 0, 0, .4);
+  z-index: 4;
+  transform: translateX(-50%) translateY(40%);  /* mouse ile bir yere tıkladığımda kutu tam mouse'un ortasında duracak, Y %40 ile de biraz da aşağıda dursun istiyorum. */
+  width: 300px;
+}
+
+.note-box textarea{
+  width: 100%;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 3px;
+  resize: none; /* kutu altında bir çubuk var, kutuyu genişletebiliyorsun, kaldıralım onu */
+  font-family: Arial, sans-serif;
+}
+
+.note-box textarea:focus {
+  border-color: #000; 
+  /* textarea'ya focus olduğumuzda border rengi siyah olsun */
+}
+
+.note-box button {
+  width: 100%;
+  height: 40px;
+  border-radius: 3px;
+  margin-top: 5px;
+  cursor: pointer;
+  background-color: #000;
+  color: #fff;
+  font-size: 15px;
+}
+
+.note-box button[disabled]{
+  /* not bölümü boş olduğunda button saydam olsun ve mouse imleci butona gelidğinde değişmesin, ne zaman ki not kısmına bir şeyler yazılır o vakit değişecekler */
+  opacity: .3;
+  pointer-events: none;
+}
+
+.note-box select{
+  /* appearance: none;  >> Comment, Note gibi seçenekleri değiştirmek için belirtilen küçük tırnak sembolünü kaldırabilirim istersem */
+  border-radius: 3px;
+  /* border: 1px solid #666; */
+  width: 100%;
+  height: 40px;
+  padding: 10px;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 500;
+  background-color: var(--color);
+  cursor: pointer;  /* pointer ile kutucuğa geldiğinde mouse imleci değişecek yani buraya tıklayabilirsin tarzında bir küçük el sembolü gözükecek */
+}
+
+.note-number{
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%) translateY(calc(-100% - 20px)); /* X tam ortalamak için, Y ise tam tepeye yazmak için */
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  opacity: .7; 
+}
+
+.note-number:hover{
+  opacity: 1;
+  /* numaranın üzerine geldiğimizde şeffaf olan görünürlük net olsun */
+  cursor:pointer;
+}
+
