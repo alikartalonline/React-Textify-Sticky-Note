@@ -7,6 +7,11 @@
   box-sizing: border-box;
 }
 
+body{
+  background-color: rgb(244, 249, 232);
+  height: 100vh;
+}
+
 .screen{
   position: fixed;
   top: 0;
@@ -130,11 +135,47 @@ padding: 10 10px;
 position: fixed;
 bottom: 0;
 display: block;
+background-color: bisque;
+border-top: 10px 10px 5px bisque;
+box-shadow: 4px 1px 10px gray;
 }
 
 .Header{
-  border-bottom: 4px groove;
-  /* margin-top: 30px; */
-  background-color: green;
-  /* height: 100vh; */
+  border-bottom: 10px 10px 5px bisque;
+  box-shadow: 4px 1px 10px gray;
+  background-color: bisque;
+  display: "flex";
 }
+
+.alikartal{
+  padding-right: 20px;
+  text-align: right;
+}
+
+.logo{
+  border-radius: 100%;
+  border: 1px solid #ddd;
+  width: 60px;
+  height: 50px;
+  margin-top: -100px;
+  justify-items: center;
+}
+
+.logo:hover{
+  background-color: blue;
+}
+
+.logo {
+border:thick double #32a1ce;
+}
+
+.logo:active {
+  position: relative;
+  top: 10px;
+}
+
+.textify{
+  text-align: center;
+  padding-top: 20px;
+}
+
