@@ -4,8 +4,8 @@ import MainContext from './MainContext';
 import Comment from './components/Comment';
 import Note from './components/Note';
 import NoteBox from './components/NoteBox';
-
-
+import Footer from './components/Footer';
+import Header from './components/Header';
 
 function App() {
 
@@ -110,7 +110,8 @@ function App() {
     onClick={handleClick}
     >
 
-    <img src="" />
+    <Header />
+
 
     
     
@@ -127,7 +128,7 @@ function App() {
         boxVisible && <NoteBox />
       }
 
-
+      <Footer />
     </div>
     </MainContext.Provider>
   );

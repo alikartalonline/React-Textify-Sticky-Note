@@ -10,7 +10,7 @@ function Comment() {
     <div
     className='commenttext'
     style={ {position: 'fixed', top: position.y, left: position.x + 20 }}
-    // bu şekilde bu yazı, mouse çubuğumun yan tarafında sürekli gözükecek
+    // bu şekilde, Leave Comment Text yazısı, mouse çubuğumun yan tarafında sürekli gözükecek
     >
     Leave Comment Text
     </div>

@@ -123,3 +123,18 @@
   cursor:pointer;
 }
 
+.footer{
+padding: 10 10px;
+/* background: black; */
+/* position: absolute; */
+position: fixed;
+bottom: 0;
+display: block;
+}
+
+.Header{
+  border-bottom: 4px groove;
+  /* margin-top: 30px; */
+  background-color: green;
+  /* height: 100vh; */
+}
